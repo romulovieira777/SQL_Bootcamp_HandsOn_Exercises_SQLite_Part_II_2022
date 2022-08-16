@@ -1,0 +1,28 @@
+Tip
+
+For exercises, we recommend using an external program:
+
+DB Browser for SQLite:
+https://sqlitebrowser.org/
+
+SQLiteStudio:
+https://sqlitestudio.pl/
+
+
+Requirements
+
+Basic knowledge of SQL and SQLite is required. Before proceeding, please make sure you meet the course requirements (completed courses):
+
+SQL Bootcamp - Hands-On Exercises - SQLite - Part I
+
+Or you have equivalent knowledge.
+
+
+📌RECOMMENDED LEARNING PATHS
+
+If you want to learn more about the recommended learning paths, please visit the link below:
+
+https://docs.google.com/document/d/1_hma_Q19C5PJzDpqedSQseknPnc-j00KuJk6OJej-n8/edit?usp=sharing
+
+Resources for this lecture
+https://docs.google.com/document/d/1_hma_Q19C5PJzDpqedSQseknPnc-j00KuJk6OJej-n8/edit
