@@ -1,5 +1,5 @@
 /*
-Exercise No. 08
+Exercise No. 09
 
 The following code is given:
 
@@ -21,15 +21,15 @@ The following query is given:
     FROM
         company
     WHERE
-        stock_exchange = 'WSE';
+        ROWID = 2;
 
 Using the EXPLAIN QUERY PLAN command, check how SQLite filters records for the above query.
 
-Expected conclusion: Full table scan.
+Expected conclusion: Searching a table with ROWID.
 
-        SCAN TABLE company;
+    SEARCH TABLE company USING INTEGER PRIMARY KEY (rowid=?);
 */
-CREATE  TABLE company (
+CREATE TABLE company (
         company_name TEXT
       , stock_exchange TEXT
       , price REAL
@@ -42,4 +42,4 @@ INSERT INTO company (company_name, stock_exchange, price) VALUES ('Playway', 'WS
 INSERT INTO company (company_name, stock_exchange, price) VALUES ('Ten Square Games', 'WSE', 550);
 
 
-EXPLAIN QUERY PLAN SELECT * FROM company WHERE stock_exchange = 'WSE';
+EXPLAIN QUERY PLAN SELECT * FROM company WHERE ROWID = 2;
