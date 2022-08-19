@@ -6,6 +6,6 @@
 - [Section 03 - Working with Tables](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_03_Working_with_Tables)
 - [Section 04 - Temporary Tables](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_04_Temporary_Tables)
 - [Section 05 - Primary Key + Rowid](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_05_Primary_Key_Rowid)
-- [Section 06 - Indexes]()
+- [Section 06 - Indexes](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_06_Indexes)
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
