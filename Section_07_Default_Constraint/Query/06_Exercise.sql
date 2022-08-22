@@ -1,5 +1,5 @@
 /*
-Exercise No. 01
+Exercise N0. 06
 
 Create a table named employee with columns:
 
@@ -7,7 +7,7 @@ Create a table named employee with columns:
     - first_name (TEXT)
     - last_name (TEXT)
     - email (TEXT)
-    - country(TEXT, default 'Poland')
+    - created_at (TEXT, by default, the time when the record was inserted)
 
 The expected data type and constraints are provided in parentheses.
 
@@ -18,6 +18,6 @@ CREATE TABLE employee (
   , first_name TEXT
   , last_name TEXT
   , email TEXT
-  , country TEXT DEFAULT 'Poland'
+  , created_at TEXT DEFAULT CURRENT_TIME
   , PRIMARY KEY (employee_id)
 );
