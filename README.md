@@ -8,6 +8,7 @@
 - [Section 05 - Primary Key + Rowid](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_05_Primary_Key_Rowid)
 - [Section 06 - Indexes](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_06_Indexes)
 - [Section 07 - Default Constraint](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_07_Default_Constraint)
-- [Section 08 - Unique Constraint]()
+- [Section 08 - Unique Constraint](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_08_Unique_Constraint)
+- [Section 09 - Check Constraint]()
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
