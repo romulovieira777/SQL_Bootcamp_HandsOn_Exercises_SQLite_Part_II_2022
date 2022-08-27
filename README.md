@@ -12,6 +12,7 @@
 - [Section 09 - Check Constraint](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_09_Check_Constraint)
 - [Section 10 - Not Null Constraint](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_10_Not_Null_Constraint)
 - [Section 11 - Foreign Key](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_11_Foreign_Key)
-- [Section 12 - Relations]()
+- [Section 12 - Relations](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_12_Relations)
+- [Section 13 - Modification of Tables]()
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
