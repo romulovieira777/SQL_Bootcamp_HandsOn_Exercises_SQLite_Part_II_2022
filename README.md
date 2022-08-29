@@ -15,6 +15,8 @@
 - [Section 12 - Relations](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_12_Relations)
 - [Section 13 - Modification of Tables](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_13_Modification_of_Tables)
 - [Section 14 - DML - Data Manipulation Language](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_14_DML_Data_Manipulation_Language)
-- [Section 15 - Inserting Data Into Tables]()
+- [Section 15 - Inserting Data Into Tables](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_15_Inserting_Data_Into_Tables)
+- [Section 16 - Data Modification](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_16_Data_Modification)
+- [Section 17 - Data Deletion]()
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
