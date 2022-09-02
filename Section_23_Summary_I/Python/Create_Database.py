@@ -58,6 +58,12 @@ cur.executescript('''DROP TABLE IF EXISTS producer;
                     VALUES (1, 'John', 'Smith', 'john.smith@esmardata.org')
                          , (2, 'Mike', 'Smith', 'mike.smith@esmardata.org')
                          , (3, 'Mike', 'Doe', 'mike.doe@esmardata.org');
+                    
+                    INSERT INTO customer_movie (movie_id, customer_id, date_rented, due_date)
+                    VALUES (4, 3, '2021-02-10', '2021-02-28')
+                         , (1, 2, '2021-02-11', '2021-02-28')
+                         , (4, 1, '2021-02-13', '2021-02-28')
+                         , (3, 2, '2021-02-17', '2021-02-31');
                     ''')
 
 print('tables created successfully!\n')
