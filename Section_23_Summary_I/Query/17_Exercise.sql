@@ -1,5 +1,5 @@
 /*
-Exercise No. 12
+Exercise No. 17
 
 The following SQL code is given:
 
@@ -62,20 +62,12 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
-
-    - 3
-    - 5
-
-Then display the movie table.
+Create a query to movie_details_v that displays all movies with a rating greater than or equal to 7 (the rating column).
+Display all columns in the output table.
 */
-DELETE FROM
-    movie
-WHERE
-    movie_id IN (3, 5);
-
-
 SELECT
     *
 FROM
-    movie;
+    movie_details_v
+WHERE
+    rating >= 7;

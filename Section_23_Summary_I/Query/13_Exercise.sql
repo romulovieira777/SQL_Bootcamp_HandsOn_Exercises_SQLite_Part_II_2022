@@ -1,5 +1,5 @@
 /*
-Exercise No. 12
+Exercise No. 13
 
 The following SQL code is given:
 
@@ -62,17 +62,14 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
+Delete the record from producer table for a producer named 'Warner Bros.' (using the producer_id).
 
-    - 3
-    - 5
-
-Then display the movie table.
+Then display the movie table and make sure there are no more movies from the producer 'Warner Bros.'.
 */
 DELETE FROM
-    movie
+    producer
 WHERE
-    movie_id IN (3, 5);
+    producer_id = 102;
 
 
 SELECT

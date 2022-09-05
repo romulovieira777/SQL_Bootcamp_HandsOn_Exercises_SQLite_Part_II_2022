@@ -1,5 +1,5 @@
 /*
-Exercise No. 12
+Exercise No. 15
 
 The following SQL code is given:
 
@@ -62,20 +62,27 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
+Make a LEFT JOIN of customer_movie, movie and producer tables. In the output table, display the columns:
 
-    - 3
-    - 5
-
-Then display the movie table.
+    - movie_id
+    - due_date
+    - title
+    - rating
+    - company_name
 */
-DELETE FROM
-    movie
-WHERE
-    movie_id IN (3, 5);
-
-
 SELECT
-    *
+    customer_movie.movie_id
+  , customer_movie.due_date
+  , movie.title
+  , movie.rating
+  , producer.company_name
 FROM
-    movie;
+    customer_movie
+LEFT JOIN
+    movie
+ON
+    customer_movie.movie_id = movie.movie_id
+LEFT JOIN
+    producer
+ON
+    movie.producer_id = producer.producer_id;

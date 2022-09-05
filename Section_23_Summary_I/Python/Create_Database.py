@@ -42,6 +42,17 @@ cur.executescript('''DROP TABLE IF EXISTS producer;
                       , FOREIGN KEY (customer_id) REFERENCES customer (customer_id) ON DELETE CASCADE ON UPDATE CASCADE
                     );
                     
+                    DROP TABLE IF EXISTS movie_rating_logs;
+                    CREATE TABLE movie_rating_logs (
+                        id INTEGER
+                      , movie_id INTEGER NOT NULL
+                      , old_rating INTEGER NOT NULL
+                      , new_rating INTEGER NOT NULL
+                      , action_type TEXT NOT NULL
+                      , created_at TEXT NOT NULL
+                      , PRIMARY KEY (id)
+                    );
+                    
                     INSERT INTO producer (producer_id, company_name, country)
                     VALUES (101, 'The Walt Disney Studios', 'United States')
                          , (102, 'Warner Bros.', 'United States')
@@ -55,18 +66,63 @@ cur.executescript('''DROP TABLE IF EXISTS producer;
                          , (5, 103, 'Saving Mr. Banks', 125, 7);
                    
                    INSERT INTO customer (customer_id, first_name, last_name, email)
-                    VALUES (1, 'John', 'Smith', 'john.smith@esmardata.org')
-                         , (2, 'Mike', 'Smith', 'mike.smith@esmardata.org')
-                         , (3, 'Mike', 'Doe', 'mike.doe@esmardata.org');
-                    
+                   VALUES (1, 'John', 'Smith', 'john.smith@esmardata.org')
+                        , (2, 'Mike', 'Smith', 'mike.smith@esmardata.org')
+                        , (3, 'Mike', 'Doe', 'mike.doe@esmardata.org');
+                   
                     INSERT INTO customer_movie (movie_id, customer_id, date_rented, due_date)
                     VALUES (4, 3, '2021-02-10', '2021-02-28')
                          , (1, 2, '2021-02-11', '2021-02-28')
                          , (4, 1, '2021-02-13', '2021-02-28')
-                         , (3, 2, '2021-02-17', '2021-02-31');
-                    ''')
+                         , (3, 2, '2021-02-17', '2021-02-31');''')
 
 print('tables created successfully!\n')
+print('data inserted successfully!\n')
+
+cur.executescript('''CREATE VIEW
+                    movie_details_v AS
+                        SELECT
+                            customer_movie.movie_id
+                          , customer_movie.due_date
+                          , movie.title
+                          , movie.rating
+                          , producer.company_name
+                        FROM
+                            customer_movie
+                        LEFT JOIN
+                            movie
+                        ON
+                            customer_movie.movie_id = movie.movie_id
+                        LEFT JOIN
+                            producer
+                        ON
+                            movie.producer_id = producer.producer_id;''')
+
+print('view created successfully!\n')
+
+cur.executescript('''CREATE TRIGGER 
+                        update_movie_rating
+                    AFTER UPDATE ON
+                        movie
+                    WHEN OLD.rating != NEW.rating
+                    BEGIN
+                        INSERT INTO movie_rating_logs (
+                            movie_id
+                          , old_rating
+                          , new_rating
+                          , action_type
+                          , created_at
+                        )
+                        VALUES (
+                            NEW.movie_id
+                          , OLD.rating
+                          , NEW.rating
+                          , 'UPDATE'
+                          , datetime('now')
+                        );
+                    END;''')
+
+print('trigger created successfully!\n')
 
 conn.commit()   # Commit the changes to the database
 cur.close()    # Close the

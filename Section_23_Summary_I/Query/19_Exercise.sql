@@ -1,5 +1,8 @@
 /*
-Exercise No. 12
+Exercise No. 19
+
+/*
+Exercise No. 18
 
 The following SQL code is given:
 
@@ -62,20 +65,23 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
+Create a table named movie_rating_logs with columns:
 
-    - 3
-    - 5
+    - id (INTEGER - PRIMARY KEY)
+    - movie_id (INTEGER - set the NOT NULL constraint)
+    - old_rating (INTEGER - set the NOT NULL constraint)
+    - new_rating (INTEGER - set the NOT NULL constraint)
+    - action_type (TEXT - set the NOT NULL constraint)
+    - created_at (TEXT - set the NOT NULL constraint)
 
-Then display the movie table.
+Define the primary key constraint at the table level.
 */
-DELETE FROM
-    movie
-WHERE
-    movie_id IN (3, 5);
-
-
-SELECT
-    *
-FROM
-    movie;
+CREATE TABLE movie_rating_logs (
+    id INTEGER
+  , movie_id INTEGER NOT NULL
+  , old_rating INTEGER NOT NULL
+  , new_rating INTEGER NOT NULL
+  , action_type TEXT NOT NULL
+  , created_at TEXT NOT NULL
+  , PRIMARY KEY (id)
+);

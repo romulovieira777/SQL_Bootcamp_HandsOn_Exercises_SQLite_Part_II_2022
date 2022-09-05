@@ -1,5 +1,5 @@
 /*
-Exercise No. 12
+Exercise No. 20
 
 The following SQL code is given:
 
@@ -62,20 +62,57 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
+    CREATE TABLE movie_rating_logs (
+        id INTEGER
+      , movie_id INTEGER NOT NULL
+      , old_rating INTEGER NOT NULL
+      , new_rating INTEGER NOT NULL
+      , action_type TEXT NOT NULL
+      , created_at TEXT NOT NULL
+      , PRIMARY KEY (id)
+    );
 
-    - 3
-    - 5
+Create a trigger called update_movie_rating that, after updating the rating (AFTER UPDATE) for the movie table, inserts
+the appropriate record into the movie_rating_logs table:
 
-Then display the movie table.
+    - id -> automatically inserted value.
+    - movie_id -> value for the movie_id of the record being updated.
+    - old_rating -> old value for the rating column in the movie table.
+    - new_rating -> new value for the rating column in the movie table.
+    - action_type -> text value 'UPDATE'.
+    - created_date -> modification date and time of the rating column in the movie table.
 */
-DELETE FROM
+-- Method 1
+CREATE TRIGGER
+    update_movie_rating
+AFTER UPDATE ON
     movie
-WHERE
-    movie_id IN (3, 5);
+FOR EACH ROW
+BEGIN
+    INSERT INTO movie_rating_logs (movie_id, old_rating, new_rating, action_type, created_at)
+    VALUES (NEW.movie_id, OLD.rating, NEW.rating, 'UPDATE', datetime('now'));
+END;
 
 
-SELECT
-    *
-FROM
-    movie;
+-- Method 2
+CREATE TRIGGER
+    update_movie_rating
+AFTER UPDATE ON
+    movie
+WHEN OLD.rating != NEW.rating
+BEGIN
+    INSERT INTO movie_rating_logs (
+        movie_id
+      , old_rating
+      , new_rating
+      , action_type
+      , created_at
+    )
+    VALUES (
+        NEW.movie_id
+      , OLD.rating
+      , NEW.rating
+      , 'UPDATE'
+      , datetime('now')
+    );
+END;

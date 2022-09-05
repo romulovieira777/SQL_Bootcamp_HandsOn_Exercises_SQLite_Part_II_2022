@@ -1,5 +1,5 @@
 /*
-Exercise No. 12
+Exercise No. 22
 
 The following SQL code is given:
 
@@ -62,20 +62,39 @@ The following SQL code is given:
          , (4, 1, '2021-02-13', '2021-02-28')
          , (3, 2, '2021-02-17', '2021-02-31');
 
-Remove the records from the movie table for the given movie_id values:
+    CREATE TABLE movie_rating_logs (
+        id INTEGER
+      , movie_id INTEGER NOT NULL
+      , old_rating INTEGER NOT NULL
+      , new_rating INTEGER NOT NULL
+      , action_type TEXT NOT NULL
+      , created_at TEXT NOT NULL
+      , PRIMARY KEY (id)
+    );
 
-    - 3
-    - 5
+    CREATE TRIGGER
+        update_movie_rating
+    AFTER UPDATE ON
+        movie
+    WHEN OLD.rating != NEW.rating
+    BEGIN
+        INSERT INTO movie_rating_logs (
+            movie_id
+          , old_rating
+          , new_rating
+          , action_type
+          , created_at
+        )
+        VALUES (
+            NEW.movie_id
+          , OLD.rating
+          , NEW.rating
+          , 'UPDATE'
+          , datetime('now')
+        );
+    END;
 
-Then display the movie table.
+Drop the trigger named update_movie_rating.
 */
-DELETE FROM
-    movie
-WHERE
-    movie_id IN (3, 5);
-
-
-SELECT
-    *
-FROM
-    movie;
+DROP TRIGGER
+    update_movie_rating;
