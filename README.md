@@ -24,5 +24,7 @@
 - [Section 21 - Triggers](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_21_Triggers)
 - [Section 22 - Summary](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_22_Summary)
 - [Section 23 - Summary I](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_23_Summary_I)
+- [Section 24 - Summary II](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_24_Summary_II)
+- [Section 25 - Summary III]()
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
