@@ -1,0 +1,11 @@
+-- Google Colab
+https://colab.research.google.com/
+
+-- GitHub
+www.github.com
+
+-- Anaconda
+www.anaconda.com
+
+-- Download Anaconda
+https://www.anaconda.com/products/distribution
