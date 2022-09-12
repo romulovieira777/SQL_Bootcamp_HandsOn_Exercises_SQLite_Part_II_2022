@@ -6,3 +6,8 @@ CREATE TABLE IF NOT EXISTS customer (
 );
 
 
+CREATE TABLE IF NOT EXISTS category (
+    category_id INTEGER
+  , category_name TEXT NOT NULL
+  , PRIMARY KEY (category_id)
+);
