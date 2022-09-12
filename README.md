@@ -28,6 +28,7 @@
 - [Section 25 - Summary III](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_25_Summary_III)
 - [Section 26 - SQLite + Python](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_26_SQLite_Python)
 - [Section 27 - Configuration Optional](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_27_Configuration_Optional)
-- [Section 28 - SQLite + Python]()
+- [Section 28 - SQLite + Python](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_28_SQLite_Python)
+- [Section 29 - Bonus](https://github.com/romulovieira777/SQL_Bootcamp_HandsOn_Exercises_SQLite_Part_II_2022/tree/main/Section_29_Bonus)
 
 Link to the course: [Udemy](https://www.udemy.com/course/sql-bootcamp-hands-on-exercises-sqlite-part-ii/)
